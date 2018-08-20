@@ -1,0 +1,20 @@
+/* CSS Document */
+body {text-align:center; margin:0; padding:0; background-color:#FBFCFE;}
+#wrap {text-align:left; margin:0 auto; width:800px; background:#FBFCFE; font-family:Verdana, Arial, Helvetica, sans-serif; 
+font-size:12px;}
+#nav {margin-top:0;}
+ul#nav {margin:0; padding:5px 5px 6px 3px; list-style-type:none; background-color: #353480; }
+ul#nav li {display:inline; margin:0; padding:5px 14px 5px 14px; border-right:1px solid white;}
+ul#nav li a:link, ul#nav li a:visited {text-decoration:none; color:#FFFFFF; font-size:11px; font-weight:bold; 
+font-family:Arial, Helvetica, sans-serif;}
+ul#nav li a:hover {color:#000835;}
+#content {padding-top: 20px;}
+#query table {border-collapse:collapse; margin-top:25px; margin-bottom:25px;}
+#query td {border-right:1px solid #FBFCFE; border-bottom:1px solid #F0F0F2; padding:1px 5px 1px 5px; color: #ffffff;
+font-weight:bold; text-align:center; font-size:14px;}
+#query tr {background:#658CB1;}
+#query tr.alternate {background:#036;}
+h1 {font-size:14px; color:#797963;}
+h3 {font-size:12px; color:#797963;}
+
+
