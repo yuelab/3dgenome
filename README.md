@@ -1,4 +1,4 @@
-## The 3D Genome Browser
+# The 3D Genome Browser
 
-# Website
+## Website
 [3dgenome.org](3dgenome.org)
