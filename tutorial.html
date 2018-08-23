@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta name="keywords" content="3D genome browser, Hi-C browser, ChIA-PET browser, Capture Hi-C browser.">
+<meta name="description" content="3D genome browser, Hi-C browser, ChIA-PET browser, Capture Hi-C browser.">
+<link rel="stylesheet" href="style2.css" type="text/css" media="all">
+<title>3D Genome Browser.</title>
+</head>
+
+<body>
+<div id="wrap"> <!--div wrap -->
+    <div id="header">
+        <a href="http://yuelab.org" target="_blank"><img src="/img/yue_lab_logo2.jpg" border="0"></a>
+    </div>
+    <ul id="nav">
+        <li><a href="index.html">Intro</a></li>
+        <li><a href="view.php">Hi-C</a></li>
+        <li><a href="virtual4c.php">Virtual 4C</a></li>
+        <li><a href="chiapet.php">ChIA-PET & Similar</a></li>
+        <li><a href="chic.php">Capture Hi-C</a></li>
+        <li><a href="compare.php">Compare Hi-C</a></li>
+        <li><a href="iview.php">Inter-chrom</a></li>
+        <li><a href="tutorial.html">Tutorial</a></li>
+        <li><a href="publications.html">Resource</a></li>
+    </ul>
+
+    <div id="content"> <!--div content -->
+        <h1> Tutoiral:</h1>
+<!--        <img src="/img/divider_horizontal_4px.gif"> -->
+
+<p> <strong> Query Hi-C interactions </strong>
+Here we demonstrate how to query the chromatin interactions for regions surrounding SHH (Sonic Hedgehog) gene. We can visualize this region by selecting human and hg19 from the drop-down for species and genome assembly, and then typing in the gene name SHH in the textbox. Our browser auto-fills gene names as users type, based a variety of gene annotations, including refSeq, UCSC and ensemble gene sets. 
+<p>
+   <img  width="500" src="fig1.png"> 
+<p> After clicking the submit button, the Hi-C interactions in GM12878 for the queried gene are shown on the right panel. For Hi-C data with multiple resolutions (bin sizes), there is another dropdown menu for users to choose the appropriate size according to their needs. In Figure below, we display the 25kb resolution Hi-C matrix, published in Rao et al Cell 2014. Once the initial HiC heatmap is displayed, there are several other function buttons to further assist users to explore around this region, such as zoom in/out and move to right/left. To make the Hi-C interaction more visible, users can conveniently adjust the color bar on the same page. 
+<p>Under the heatmap, we also imbed the UCSC genome browser for the same region, so that the users can explore both the chromatin interaction and other "omics" data simultaneously. In this case, we display the tracks for RNA-Seq and H3K27ac (active enhancer mark) ChIP-Seq data for the same cell type. In this region, there is a known enhancer (marked by green bar) that regulate the SHH gene17. We observe that this known enhancer and the promoter of SHH are located within the same TAD and the long range interaction between them is also evident in the Hi-C map, marked by the black arrow
+<p>
+<img  width="520" src="fig1.2.png">
+<p> You can also conveniently check the expression for the queried the genes across over 100 cell types profiled by the ENCODE project. Simply click the "Check gene expression on the top right corner of this page. 
+<img  width="500" src="fig1.3.png">
+<p>
+<p> <strong> Identify Linkage between Genes, Enhancers and SNPs </strong> Although displaying Hi-C data as a heatmap is informative to visualize large genome structures such as TADs, it is not intuitive to show interactions between two specific loci. For example, many users are interested in using Hi-C data to explore enhancer-promoter interactions.  To facilitate users with this goal, we implemented the following three methods in our 3D Genome browser: 
+
+<p> <strong> Virtual 4C: </strong> Circular chromosomal conformation capture(4C) is a chromatin ligation-based method that surveys for one-vs-many interactions in the genome, that is, to measure the interaction frequencies between a bait locus of interest and any other loci. 4C data is plotted as a curve line, where the center is the bait region and a peak signal in distal region indicates there is a chromatin interaction event. In our browser, we use the queried region as bait (either a gene name or a SNP ID), and extract a row of Hi-C data centered on the bait region, hence, virtual 4C.
+<strong>ChIA-PET: </strong> another implementation of chromatin ligation-based method, which detects long-range interactions between genomic regions that are enriched for a feature (either histone modification or transcription factor binding). Each pairwise ChIA-PET interaction is visualized as elliptical arcs in our browser. 
+<strong> DHS-Linkage: </strong>
+ENCODE Consortium profiled DHS in more than 100 cell types, and therefore making it possible to compute Pearson correlation coefficients for all distal DHS with gene proximal DHS. Between each pair of distal-proximal DHSs, you can compute a Pearson correlation based their tissue-specificity. For more details, please check out ENCODE Consortium Nature 2012 and Thurman et al, Nature 2012.  
+<p> We incorporated these three methods in our browser. In the below figure, we show an example by querying rs12740374, a SNPs that has been associated with coronary heart disease19. This SNP is located within a candidate enhancer region, marked by H3K27Ac as shown in the UCSC genome browser. In this case, virtual 4C, ChIA-PET and DHS-Linkage all support that there is the potential interaction between the enhancer harboring this SNP and the promoter region of PSMA5, which is implicated in heart disease20. By integrating multiple lines of evidence, our browser provides a valuable resource for investigators to create hypotheses connecting distal non-coding variant, distal regulatory elements and their target gene.
+   <p><img width="500" src="fig2.png"> 
+<p> <strong> Visualizing ChIA-PET or Capture Hi-C data </strong>
+The main difference for visualizing Hi-C and ChIA-PET/Capture Hi-C is that Hi-C is usually displayed as a heatmap, while the other format are shown as arcs. Here we will use the PLAC-Seq (a datatype similar to ChIA-PET) to show chromatin interactions surrounding Galnt7 in mESC as an example. 
+<p> From dropdown menu, choose PLAC-Seq, mouse, mm9, mESC, H3K27ac-mm9. Type in the gene name "Galnt7" and query its surrounding 400kb. Click "Go".
+   <p><img width="500" src="fig3.1.png"> 
+<p> All the chromatin interactions predicted by PLAC-Seq in this region are displayed on screen. The exact interaction loci are listed at the bottom of this page. 
+   <p><img width="500" src="fig3.2.png"> 
+<p> By check the "Show all interactions OR only interactions for queried gene", you can convert between showing all the interactions in this region, or ONLY show interactions with the queried gene. This function is particularly useful when there are lots of interactions in this region. Further, checking "Show interaction as arcs OR as shaded area" will give you differnt style for displaying the interactions. 
+   <p><img width="500" src="fig3.3.png"> 
+<p> <strong> Compare different Hi-C samples:</strong> You can visualize Hi-C data from different cell types/conditions or even differnet species in the compare Hi-C page. Just choose the Hi-C source data from the dropdown menu and then type in a gene name or region. In the example, we are querying myc gene in GM and K562 cell types at 10kb resolution.
+   <p><img width="500" src="fig4.1.png"> 
+<p> The Hi-C interaction maps for the chosen two cell types are displayed below. The green circles indicate two potential GM12878 cell-type specific interactions.
+   <p><img width="500" src="fig4.2.gm_k562.png"> 
+<p> <strong> Use your own data:</strong>
+Our browser supports users to use their own data, including chromatin interaction data, ChIP-Seq and RNA-Seq data. This allows investigators to use our tool to analyze un-published data.  To use their own epigenomics/genomics data, users only need to provide a UCSC genome browser session ID. As shown in the "Identify Linkage between Genes, Enhancers and SNPs" section, we display a user-defined session that contains RNA-Seq and ChIP-Seq for H3K27ac data in GM12878 cells. 
+<p> To use their own Hi-C data, uses need to convert the Hi-C n x n matrix to an indexed binary file format that we recently developed, namely Binary Upper TrianguLar MatRix (BUTLR file). The new binary file enables the remote access of contact matrix hosted on any HTTP-supported servers. It also greatly increases the query speed, as the index directly points queries to the region of interest rather than searching through the whole matrix. The BUTLR format also dramatically reduces the storage space of contact matrix files, not only through the binarization but also through the omission of redundant values. For example, a 1-kb hg19 intrachromosomal Hi-C contact matrix requires ~1 TB of storage for the tab-delimited matrix file and ~32GB for the coordinated list format. In comparison, the BUTLR format only needs ~11GB of storage. To convert contact matrices to BUTLR files, please use BUTLRTools available at <a href="https://github.com/yuelab/BUTLRTools">Github</a> and check out the BUTLR tutorial <a href="butlr.html">here</a>.
+<p>
+The tutorial is being updated with the new version of the 3D Genome Browser. If you have any questions or concerns, please feel free to <a href="http://promoter.bx.psu.edu/hi-c/contact.html">contact us</a>.
+    </div>    <!--div content -->
+</div>        <!--div wrap -->
+</body>
+</html>

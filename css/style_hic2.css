@@ -1,0 +1,270 @@
+    #middleWrapper {
+          position: relative;
+          width: 760px;
+          height: 197px;
+          border: 1px solid black;
+          overflow: hidden; /* add this to contain floated children */
+      }
+
+    #leftSideTitle {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 45%;
+        border: 1px solid black;
+      }
+
+    #rightSideTitle {
+        position: absolute;
+        top: 0px;
+        left: 45%;
+        width: 414px;
+        border: 1px solid black;
+      }
+    #leftSide {
+        position: absolute;
+        top: 15px;
+        left: 0px;
+        width: 45%;
+        height: 180px;
+        border: 1px solid black;
+      }
+
+    #rightSide {
+        position: absolute;
+        top: 15px;
+        left: 45%;
+        width: 414px;
+        height: 180px;
+        border: 1px solid black;
+      }
+    #optional {
+        width: 756px;
+        height: 118px;
+        border-color: black;
+        border-style: solid;
+        border-width: 0px 2px 2px 2px;
+      }
+
+#heatMapContainer {
+    position:relative;
+}
+
+#error {
+    position:absolute;
+    text-align:center;
+    width:762px;
+    color:red;
+}
+
+#slider-info {
+    position:absolute;
+    text-align:center;
+    width:762px;
+    height:22px;
+    color:purple;
+}
+
+#loading {
+    position:absolute;
+    opacity : 0.7;
+    z-index:3;
+    text-align:center; 
+    line-height:686px; 
+}
+
+#js_warn {
+    position:absolute;
+    color:red;
+    background-color:white;
+    z-index:1;
+    text-align:center;
+    line-height:686px;
+}
+
+#navigator {
+    position:absolute;
+    z-index:3;
+    background:transparent;
+}
+
+#heatMapCanvas {
+    position:absolute;
+    background-color:white;
+    z-index:2;   
+}
+
+.heatMapContainer {
+    position:relative;
+}
+
+.error {
+    position:absolute;
+    text-align:center;
+    width:762px;
+    color:red;
+}
+
+.slider-info {
+    position:absolute;
+    text-align:center;
+    width:762px;
+    height:22px;
+    color:purple;
+}
+
+.loading {
+    position:absolute;
+    opacity : 0.7;
+    z-index:3;
+    text-align:center;
+    line-height:343px;
+}
+
+.js_warn {
+    position:absolute;
+    color:red;
+    background-color:white;
+    z-index:1;
+    text-align:center;
+    line-height:343px;
+}
+
+.navigator {
+    position:absolute;
+    z-index:3;
+    background:transparent;
+}
+
+.heatMapCanvas {
+    position:absolute;
+    background-color:white;
+    z-index:2;
+}
+
+#zi {float:right;}
+#zo {float:right;}
+#lk {float:right;}
+
+#tx {text-align: center;}
+
+#sliderRangePos {
+    width:686px;
+    background: white;
+}
+#sliderRangePos .ui-slider-range { 
+    background: rgba(225, 0, 0, 0.5); 
+}
+#sliderRangePosAppendDiv {
+    float: right;
+    height: 100%;
+    background: rgba(225, 0, 0, 1.0);
+    border-radius: 0 4px 4px 0;
+}
+
+#sliderRangeNeg {
+    width:686px;
+    background: rgba(0, 0, 255, 1.0);
+}
+#sliderRangeNeg .ui-slider-range {
+    background: rgba(255, 255, 255, 0.5);
+}
+#sliderRangeNegAppendDiv {
+    float: right;
+    height: 100%;
+    background: white;
+    border-radius: 0 4px 4px 0;
+}
+
+#spinnerPosDiv {
+    width:686px;
+}
+
+#spinnerNegDiv {
+    width:686px;
+}
+
+#spinnerButton {
+    width:686px;
+    display:none;
+}
+
+/**/
+.sliderRangePos {
+    width:686px;
+    background: white;
+}
+.sliderRangePos .ui-slider-range {
+    background: rgba(225, 0, 0, 0.5);
+}
+.sliderRangePosAppendDiv {
+    float: right;
+    height: 100%;
+    background: rgba(225, 0, 0, 1.0);
+    border-radius: 0 4px 4px 0;
+}
+
+#sliderRangePosAppendDiv_1 {
+    float: right;
+    height: 100%;
+    background: rgba(225, 0, 0, 1.0);
+    border-radius: 0 4px 4px 0;
+}
+#sliderRangePosAppendDiv_2 {
+    float: right;
+    height: 100%;
+    background: rgba(225, 0, 0, 1.0);
+    border-radius: 0 4px 4px 0;
+}
+
+.sliderRangeNeg {
+    width:686px;
+    background: rgba(0, 0, 255, 1.0);
+}
+.sliderRangeNeg .ui-slider-range {
+    background: rgba(255, 255, 255, 0.5);
+}
+.sliderRangeNegAppendDiv {
+    float: right;
+    height: 100%;
+    background: white;
+    border-radius: 0 4px 4px 0;
+}
+
+.spinnerPosDiv {
+    width:686px;
+}
+
+.spinnerNegDiv {
+    width:686px;
+}
+
+
+.ui-tooltip-content {
+    font-size:10pt;
+    font-family:Calibri;
+}
+
+.notice {
+    position:relative;
+    width:762px;
+    text-align:center;
+}
+
+.data {
+    display: none;
+}
+
+.ui-autocomplete {
+    max-height: 200px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+  }
+  /* IE 6 doesn't support max-height
+   * we use height instead, but this forces the menu to always be this tall
+   */
+  * html .ui-autocomplete {
+    height: 200px;
+  }
+

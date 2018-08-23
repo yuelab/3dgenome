@@ -1,0 +1,16 @@
+.ui-selectmenu-button {
+    display: inline-flex;
+}
+.ui-selectmenu-button span.ui-selectmenu-text {
+    padding-top: 0.4em;
+    padding-right: 0.4em;
+    padding-bottom: 0.4em;
+    padding-left: 0.4em;
+}
+.ui-widget {
+    font-family: Arial;
+    font-size: 1.0em;
+}
+.overflow {
+    height: 200px;
+}

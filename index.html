@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta name="keywords" content="3D genome browser, Hi-C browser, ChIA-PET browser, Capture Hi-C browser.">
+<meta name="description" content="3D genome browser, Hi-C browser, ChIA-PET browser, Capture Hi-C browser.">
+<link rel="stylesheet" href="style2.css" type="text/css" media="all">
+<link rel="stylesheet" href="style_hic.css" type="text/css" media="all">
+
+<title>3D Genome browser: visualize Hi-C, ChIA-PET, HiCHiP, PLAC-Seq, Capture Hi-C data.</title>
+</head>
+
+<body>
+<div id="wrap">
+<div id="header">
+  <a href="http://yuelab.org"><img src="/img/yue_lab_logo2.jpg" border="0"></a>
+</div>
+<ul id="nav">
+      <li><a href="index.html">Intro</a></li>
+        <li><a href="view.php">Hi-C</a></li>
+        <li><a href="virtual4c.php">Virtual 4C</a></li>
+        <li><a href="chiapet.php">ChIA-PET & Similar</a></li>
+        <li><a href="chic.php">Capture Hi-C</a></li>
+        <li><a href="compare.php">Compare Hi-C</a></li>
+        <li><a href="iview.php">Inter-chrom</a></li>
+        <li><a href="tutorial.html">Tutorial</a></li>
+        <li><a href="publications.html">Resource</a></li>
+
+</ul>
+<div id="content">
+<h1> Welcome to 3D Genome Browser, where you can join 50,000 other users from over 100 countries to explore chromatin interaction data, such as Hi-C, ChIA-PET, Capture Hi-C, PLAC-Seq, and more. Up till Dec. 2017, we have been visited more than 500,000 times!</h1>
+<!--<img src="/img/divider_horizontal_4px.gif"> -->
+<!--p>
+<strong>The 3D Genome Browser</strong><br>
+The Hi-C technology has revealed genome-wide interactions as well as the spatial organization of the genome. The 3D Genome Browser provides heatmap virtualizations of the Hi-C intra-chromosomal contract matrices. 
+Our Browser is <strong><font color="000066">gene-centric</font></strong>, which allows the exploration of potential cis-regulatory elements and/or topologically associating domains (TADs) for the gene or genomic feature of interest. 
+The Browser <strong><font color="000066">contextualizes</font></strong> the Hi-C data with established the University of California Santa Cruz (UCSC) Genome Browser, with the retained ability to customize tracks and personalize sessions. 
+The user could browse existing high-quality Hi-C datasets for various cell types, or, with the <strong><font color="000066">"Use Your Own Data"</font></strong> feature, to visualize user-generated Hi-C data. 
+-->
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
+
+
+<div class="w3-content w3-display-container" style="max-width:800px">
+<p align="center">
+  <img class="mySlides w3-animate-opacity" src="img/3dg_screenshot.png" style="width:800px">
+  <img class="mySlides w3-animate-opacity" src="img/HiC.jpg" style="width:800px">
+  <img class="mySlides w3-animate-opacity" src="img/4c.jpg" style="width:800px">
+  <img class="mySlides w3-animate-opacity" src="img/ChIA-PET.jpg" style="width:800px">
+  <img class="mySlides w3-animate-opacity" src="img/capture-HiC.jpg" style="width:800px">
+  <img class="mySlides w3-animate-opacity" src="img/Compare-HiC.jpg" style="width:800px">
+  <img class="mySlides w3-animate-opacity" src="img/diff-Hi-C.png" style="width:800px">
+  <button class="w3-button w3-display-left w3-dark-grey" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-display-right w3-dark-grey" onclick="plusDivs(1)">&#10095;</button>
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <span class="w3-badge demo w3-border w3-hover-red" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-hover-red" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-hover-red" onclick="currentDiv(3)"></span>
+    <span class="w3-badge demo w3-border w3-hover-red" onclick="currentDiv(4)"></span>
+    <span class="w3-badge demo w3-border w3-hover-red" onclick="currentDiv(5)"></span>
+    <span class="w3-badge demo w3-border w3-hover-red" onclick="currentDiv(6)"></span>
+    <span class="w3-badge demo w3-border w3-hover-red" onclick="currentDiv(7)"></span>
+  </div>
+</div>
+
+<script type="text/javascript" src="slideshow.js" > </script>
+
+<!--
+<p align="center">
+<img src="img/3dg_screenshot.png" style="width:600px;height:400px;">
+-->
+<br>
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Beside visualizing chromatin interaction data, you can also seamlessly browse other omics data such as ChIP-Seq or RNA-Seq for the same genomic region, and gain a complete view of both regulatory landscape and 3D genome structure for any given gene. 
+
+You can also check the expression of any queried gene across hundreds of tissue/cell types measured by the ENCODE consortium. 
+
+Finally, please check out the virtual 4C page, where we provide multiple methods to link distal cis-regulatory elements with their potential target genes, including virtual 4C, ChIA-PET and cross-cell-type correlation of proximal and distal DHSs.
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We hope you find our website a valuable resource for the study of 3D genome organization and gene regulation, and please feel free to contact us if you have any suggestions or comments. THANKS!
+
+<!-- commented out by Feng 12242016
+<p>
+<strong>Virtual 4C</strong><br>
+The 4C (Circularized Chromosome Conformation Capture) is a modified 3C methodology that focuses on quantifying the genomic interactions involving a single genomic site of interest ("bait locus" or "anchoring point") with other genomic sites. The virtual 4C simulates 4C results with the Hi-C contact matrix (hence, "virtual") and is visualized as a linear plot of number of genomic interactions vs. genomic coordinates involving an identified anchoring point. Our virtual 4C Plot supports searching with <strong><font color="000066">gene symbols and SNP rsids</font></strong> to obtain a linear plot of the quantified interactions between gene transcriptional start site(s) TSS(s) or SNP and regions in its vicinity. With supplementation of <strong><font color="000066">DHS-Linkage and ChIA-PET data</font></strong>, this is particularly useful in identifying potential cis-regulatory elements for those genomic sites of interest.
+-->
+<!--
+<p>
+<div class="notice" style="color:#063B90">The browser is developed with Google Chrome 42*. While we test our browser on a variety of web browsers and operating systems, we recommend our users to use Chrome for the most optimal experience.</div></p>
+-->
+<p>
+<!-- hitwebcounter Code START 
+<div class="notice"><strong>We welcome any feedbacks to our Browser.</strong></div>
+
+<div style="text-align: right; margin-top:10px; ">
+<a href="http://www.hitwebcounter.com/" target="_blank">
+<img src="http://hitwebcounter.com/counter/counter.php?page=4487615&style=0006&nbdigits=7&type=page&initCount=1234" title="http://www.hitwebcounter.com/" Alt="http://www.hitwebcounter.com/"   border="0" >
+</a>
+-->
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"> 
+</script>
+<script type="text/javascript"> 
+_uacct = "UA-31923273-1";
+urchinTracker();
+</script>
+</div>
+</div>
+</body>
+</html>
